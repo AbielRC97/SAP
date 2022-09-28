@@ -24,6 +24,9 @@
     img(src="../assets/logo.png", alt="Woman 3")
   .col-md-12: ui5-avatar(size="XL")
     img(src="../assets/logo.png", alt="Woman 3")
+  .col-md-12: span.display-4 Avatar Contador
+  .col-md-12: ui5-avatar(initials="RC", color-scheme="Accent1", size="XL")
+    span.custom-badge(slot="badge") {{ num }}
 </template>
 <script lang="ts" setup>
 /*
@@ -33,8 +36,11 @@ import "@ui5/webcomponents/dist/Button.js";
 import "@ui5/webcomponents/dist/Input.js";
 import "@ui5/webcomponents/dist/Avatar.js";
 import "@ui5/webcomponents-icons/dist/AllIcons.js";
-import { onMounted, nextTick } from "vue";
+import { onMounted, nextTick, ref } from "vue";
+const num = ref(0);
 onMounted(async () => {
+  const rndInt = Math.floor(Math.random() * 6) + 1;
+  num.value = rndInt;
   await nextTick();
 });
 </script>
