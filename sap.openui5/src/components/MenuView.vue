@@ -18,7 +18,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
       li.nav-item
         router-link.nav-link(to="/avatar") Avatar
       li.nav-item
-        a.nav-link(href="#") Pricing
+        router-link.nav-link(to="/brage") Brage
       li.nav-item
         a.nav-link.disabled(href="#") Disabled
 </template>
