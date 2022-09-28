@@ -20,5 +20,5 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
       li.nav-item
         router-link.nav-link(to="/brage") Brage
       li.nav-item
-        a.nav-link.disabled(href="#") Disabled
+        router-link.nav-link(to="/headerbar") Header Bar
 </template>

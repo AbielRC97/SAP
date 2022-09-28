@@ -17,6 +17,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "brage",
     component: () => import("../views/BrageView.vue"),
   },
+  {
+    path: "/headerbar",
+    name: "headerbar",
+    component: () => import("../views/HeaderBarView.vue"),
+  },
 ];
 
 const router = createRouter({
