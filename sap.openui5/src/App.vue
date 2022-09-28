@@ -1,7 +1,14 @@
 <template>
+  <menu-view />
   <router-view />
 </template>
-
+<script lang="ts" setup>
+import { onMounted, nextTick } from "vue";
+import MenuView from "./components/MenuView.vue";
+onMounted(async () => {
+  await nextTick();
+});
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
