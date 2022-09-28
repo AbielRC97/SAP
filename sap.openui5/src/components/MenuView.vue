@@ -21,4 +21,5 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
         router-link.nav-link(to="/brage") Brage
       li.nav-item
         router-link.nav-link(to="/headerbar") Header Bar
+      li.nav-item: router-link.nav-link(to="/breadcrumbs") BreadCrumbs
 </template>

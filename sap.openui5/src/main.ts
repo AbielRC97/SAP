@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 // createApp(App).use(BootstrapVue).use(router).mount("#app");
 const app = createApp(App);
-//app.config.isCustomElement = (tag) => tag.startsWith("ui5-");
+app.config.isCustomElement = (tag) => tag.startsWith("ui5-");
 app.use(BootstrapVue);
 app.use(router);
 app.mount("#app");
