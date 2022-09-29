@@ -15,7 +15,6 @@
     @change="cambiarDatos($event.target.value)"
   )
     ui5-cb-item(v-for="(item, index) in Tipos", :key="index", :text="item")
-  .col-md-12: span.text-success {{ tipo }}
 </template>
 <script lang="ts" setup>
 import "@ui5/webcomponents/dist/Button.js";
@@ -30,18 +29,13 @@ import { onMounted, nextTick, ref } from "vue";
 import { Tipo } from "../Tools/Utilities";
 const Tipos = ref([] as Tipo[]);
 const tipo = ref({} as Tipo);
-async function cambiarDatos(value: any) {
-  console.log("I'm Horney");
-  console.log(value);
+async function cambiarDatos(value: string) {
   tipo.value = value as Tipo;
   await nextTick();
 }
 onMounted(async () => {
   Tipos.value = Object.values(Tipo);
   tipo.value = Tipo.Slash;
-  await nextTick(() => {
-    let Object = document.getElementById("ui5-combobox-input");
-    console.log(Object?.innerText);
-  });
+  await nextTick();
 });
 </script>
