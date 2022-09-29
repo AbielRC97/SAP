@@ -22,4 +22,5 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
       li.nav-item
         router-link.nav-link(to="/headerbar") Header Bar
       li.nav-item: router-link.nav-link(to="/breadcrumbs") BreadCrumbs
+      li.nav-item: router-link.nav-link(to="/busyindicator") BusyIndicatorView
 </template>

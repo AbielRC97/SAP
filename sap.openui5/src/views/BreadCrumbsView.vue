@@ -17,9 +17,6 @@
     ui5-cb-item(v-for="(item, index) in Tipos", :key="index", :text="item")
 </template>
 <script lang="ts" setup>
-import "@ui5/webcomponents/dist/Button.js";
-import "@ui5/webcomponents/dist/Input.js";
-import "@ui5/webcomponents/dist/Avatar.js";
 import "@ui5/webcomponents-icons/dist/AllIcons.js";
 import "@ui5/webcomponents/dist/Breadcrumbs.js";
 import "@ui5/webcomponents/dist/BreadcrumbsItem.js";
@@ -35,7 +32,7 @@ async function cambiarDatos(value: string) {
 }
 onMounted(async () => {
   Tipos.value = Object.values(Tipo);
-  tipo.value = Tipo.Slash;
+  tipo.value = Tipo.GreaterThan;
   await nextTick();
 });
 </script>

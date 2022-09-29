@@ -27,6 +27,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "breadcrumbs",
     component: () => import("../views/BreadCrumbsView.vue"),
   },
+  {
+    path: "/busyindicator",
+    name: "busyindicator",
+    component: () => import("../views/BusyIndicatorView.vue"),
+  },
 ];
 
 const router = createRouter({
