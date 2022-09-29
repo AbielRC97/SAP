@@ -28,11 +28,18 @@
         :key="item",
         :text="item"
       )
+    .col-sm-12.col-md-12.col-lg-12.col-xl-12.col-xxl-12.mt-2: ui5-button.btn.btn-success(
+      design="Emphasized",
+      icon="add",
+      tooltip="Add"
+    ) Agregar
 </template>
 <script lang="ts" setup>
 import "@ui5/webcomponents/dist/Input.js";
 import "@ui5/webcomponents/dist/ComboBox.js";
 import "@ui5/webcomponents/dist/ComboBoxItem.js";
+import "@ui5/webcomponents/dist/Button";
+import "@ui5/webcomponents-icons/dist/AllIcons.js";
 import { onMounted, nextTick, reactive, watch, ref } from "vue";
 import { RegistroUsuario, TipoUsuario } from "../Models/RegistroUsuario";
 const usuario = reactive({
