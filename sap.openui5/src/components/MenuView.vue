@@ -12,15 +12,5 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
     span.navbar-toggler-icon
   #navbarNav.collapse.navbar-collapse
     ul.navbar-nav
-      li.nav-item.active
-        router-link.nav-link(to="/")
-          | Contador
-      li.nav-item
-        router-link.nav-link(to="/avatar") Avatar
-      li.nav-item
-        router-link.nav-link(to="/brage") Brage
-      li.nav-item
-        router-link.nav-link(to="/headerbar") Header Bar
-      li.nav-item: router-link.nav-link(to="/breadcrumbs") BreadCrumbs
-      li.nav-item: router-link.nav-link(to="/busyindicator") BusyIndicatorView
+      li.nav-item: router-link.nav-link(to="/registrar") Registrar
 </template>
