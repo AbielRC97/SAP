@@ -31,7 +31,8 @@
     .col-sm-12.col-md-12.col-lg-12.col-xl-12.col-xxl-12.mt-2: ui5-button.btn.btn-success(
       design="Emphasized",
       icon="add",
-      tooltip="Add"
+      tooltip="Add",
+      @click.prevent="GuardarRegistro()"
     ) Agregar
 </template>
 <script lang="ts" setup>
@@ -49,6 +50,10 @@ const tiposUsuario = ref([] as string[]);
 watch(usuario, (value) => {
   console.log(JSON.stringify(usuario.value));
 });
+async function GuardarRegistro() {
+  console.clear();
+  console.log(JSON.stringify(usuario.value));
+}
 onMounted(async () => {
   usuario.value = {} as RegistroUsuario;
   usuario.value.tipo = TipoUsuario.Usuario;
