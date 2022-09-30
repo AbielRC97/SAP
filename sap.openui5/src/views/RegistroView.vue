@@ -14,7 +14,6 @@
     )
     .col-sm-12.col-md-12.col-lg-12.col-xl-12.col-xxl-12.mt-2: ui5-input.form-control(
       :value="usuario.value.contrasena",
-      type="password",
       placeholder="Constraseña del Usuario",
       @input="usuario.value.contrasena = $event.target.value"
     )
