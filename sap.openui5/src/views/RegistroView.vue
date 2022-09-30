@@ -40,6 +40,7 @@ import "@ui5/webcomponents/dist/ComboBox.js";
 import "@ui5/webcomponents/dist/ComboBoxItem.js";
 import "@ui5/webcomponents/dist/Button";
 import "@ui5/webcomponents-icons/dist/AllIcons.js";
+import "@ui5/webcomponents-icons/dist/add.js";
 import { onMounted, nextTick, reactive, watch, ref } from "vue";
 import { RegistroUsuario, TipoUsuario } from "../Models/RegistroUsuario";
 const usuario = reactive({

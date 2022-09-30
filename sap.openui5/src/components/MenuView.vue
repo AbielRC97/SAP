@@ -14,4 +14,5 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
     ul.navbar-nav
       li.nav-item: router-link.nav-link(to="/registrar") Registrar
       li.nav-item: router-link.nav-link(to="/login") LogIn
+      li.nav-item: router-link.nav-link(to="/contactos") Contactos
 </template>
