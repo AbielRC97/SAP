@@ -9,3 +9,7 @@ export interface RegistroUsuario {
   fechaRegistro?: Date;
   tipo?: TipoUsuario;
 }
+export interface LogIn {
+  email?: string;
+  contrasena?: string;
+}
