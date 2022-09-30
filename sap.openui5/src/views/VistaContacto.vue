@@ -21,7 +21,7 @@ const columns = ref([
   { data: "nombre" },
   { data: "telefono" },
   { data: "fecha", type: "date", render: formatoFecha },
-  { date: "id", type: "link", render: crearBoton },
+  { date: "id", type: "number", render: crearBoton },
 ]);
 const data = ref([] as Contacto[]);
 function seleccionfila(data: any) {
