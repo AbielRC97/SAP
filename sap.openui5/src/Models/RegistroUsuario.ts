@@ -13,3 +13,8 @@ export interface LogIn {
   email?: string;
   contrasena?: string;
 }
+export interface Contacto {
+  nombre?: string;
+  telefono?: string;
+  fecha?: Date;
+}

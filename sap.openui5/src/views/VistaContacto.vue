@@ -2,7 +2,7 @@
 .container.mt-4: .row
   .col-sm-12.col-md-12.col-lg-12.col-xl-12.col-xxl-12.mt-2: .card: .card-body: .row.justify-content-around
     .col-sm-12.col-md-12.col-lg-12.col-xl-12.col-xxl-12.mt-2: p.fw-bold.h2 Contactos
-    .col-sm-12.col-md-12.col-lg-12.col-xl-12.col-xxl-12.mt-2: .table-responsive: DataTable.table.table-striped.table-hover(
+    .col-sm-12.col-md-12.col-lg-12.col-xl-12.col-xxl-12.mt-2: .table-responsive: DataTable.display.table.table-striped.table-hover(
       :columns="columns",
       :data="data",
       :options="{ language: { url: 'http://cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json' } }"
@@ -15,19 +15,23 @@
 <script lang="ts" setup>
 import DataTable from "datatables.net-vue3";
 import { onMounted, nextTick, reactive, ref } from "vue";
-import { TipoUsuario } from "../Models/RegistroUsuario";
+import { TipoUsuario, Contacto } from "../Models/RegistroUsuario";
 const columns = ref([
-  { data: "name" },
+  { data: "nombre" },
   { data: "telefono" },
-  { data: "fecha" },
+  { data: "fecha", type: "date", render: formatoFecha },
 ]);
-const data = ref([] as any[]);
+const data = ref([] as Contacto[]);
+function formatoFecha(data: Date) {
+  console.log(data);
+  return data.toLocaleDateString("en");
+}
 onMounted(async () => {
   console.clear();
   data.value.push({
-    name: "AbielRC",
+    nombre: "AbielRC",
     telefono: "5513204638",
-    fecha: "30/09/2022",
+    fecha: new Date(),
   });
   console.log(columns.value);
   await nextTick();
