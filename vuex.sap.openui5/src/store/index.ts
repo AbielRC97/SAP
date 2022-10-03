@@ -1,9 +1,22 @@
 import { createStore } from "vuex";
-
 export default createStore({
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+  state: {
+    numeros: [] as any[],
+  },
+  mutations: {
+    setNumeros(state, payload) {
+      console.log(payload);
+      state.numeros.push(payload);
+    },
+  },
+  actions: {
+    addNumber({ commit }, payload) {
+      commit("setNumeros", payload);
+    },
+  },
+  getters: {
+    obtenerNumeros(state) {
+      return state.numeros;
+    },
+  },
 });
