@@ -14,7 +14,7 @@ export interface LogIn {
   contrasena?: string;
 }
 export interface Contacto {
-  id?: number;
+  idContacto: number;
   nombre?: string;
   telefono?: string;
   fecha?: Date;
