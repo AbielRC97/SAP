@@ -5,7 +5,7 @@
 </template>
 <script lang="ts" setup>
 import { onMounted, nextTick, computed } from "vue";
-import { mapGetters, useStore } from "vuex";
+import { mapState, useStore } from "vuex";
 const store = useStore();
 const numeros = computed(() => {
   return store.getters.obtenerNumeros;
